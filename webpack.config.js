@@ -27,9 +27,8 @@ module.exports = {
       './app/api'
     ],
     alias: {
-      Main: 'app/components/Main.jsx',
-      ApplicationStyles: 'app/styles/app.scss'
-
+      ApplicationStyles: 'app/styles/app.scss',
+      actions: 'app/actions/actions.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -38,7 +37,7 @@ module.exports = {
       {
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015', 'stage-3']
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/

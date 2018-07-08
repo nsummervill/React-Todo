@@ -55,9 +55,16 @@ var updatedTodos = this.state.todos.map(function(todo) {
     var filteredTodos = TodoAPI.filterTodos(todos, showCompleted, searchText);
     return(
       <div>
-        <TodoSearch onSearch={this.handleSearch}/>
-        <TodoList todos={filteredTodos} onToggle={this.handleToggle}/>
-        <AddTodo onNewTodo={this.handleAddTodo}/>
+        <hi className="page-title">Todo App</hi>
+        <div className="row">
+          <div className="column small-centered small-11 medium-6 large-5">
+            <div className="container">
+              <TodoSearch onSearch={this.handleSearch}/>
+              <TodoList todos={filteredTodos} onToggle={this.handleToggle}/>
+              <AddTodo onNewTodo={this.handleAddTodo}/>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
